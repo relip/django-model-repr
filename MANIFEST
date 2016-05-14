@@ -1,0 +1,3 @@
+setup.py
+django_model_repr/__init__.py
+django_model_repr/models.py
