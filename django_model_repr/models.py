@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.db import models
+from django.conf import settings
 
 class Model(models):
 	class Meta:
@@ -22,4 +23,6 @@ class Model(models):
 
 		return buf
 
-setattr(models, "Model", Model)
+
+if getattr(settings, "MODEL_REPR_MONEY_PATCHING", True):
+	setattr(models, "Model", Model)
