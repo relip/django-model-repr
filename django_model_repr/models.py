@@ -3,7 +3,7 @@
 from django.db import models
 from django.conf import settings
 
-class Model(models):
+class Model(models.Model):
 	class Meta:
 		abstract = True
 
