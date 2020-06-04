@@ -24,5 +24,5 @@ class Model(models.Model):
 		return buf
 
 
-if getattr(settings, "MODEL_REPR_MONEY_PATCHING", True):
+if getattr(settings, "MODEL_REPR_MONKEY_PATCHING", True):
 	setattr(models, "Model", Model)
